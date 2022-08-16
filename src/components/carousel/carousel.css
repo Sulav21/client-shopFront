@@ -1,0 +1,24 @@
+.d-block{
+    width: 75%;
+    height: 500px;
+    margin:auto;
+    margin-top: 2rem;
+    border-radius: 5px;
+}
+.carousel-caption{
+    background: linear-gradient(hsla(0,0%,100%,.4),hsla(0,0%,100%,.4));
+    border-radius: 10px;
+}
+
+.carousel-caption h3{
+font-size: 3rem;
+font-weight:900;
+letter-spacing: 5px;
+color: #0a1930;
+}
+
+.carousel-caption p{
+    font-size: 1.5rem;
+    color:#aa2a2a;
+}
+

@@ -1,10 +1,19 @@
+import { Button } from 'react-bootstrap';
 import './App.css';
+import { Home } from './pages/home/Home';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import { ProductClick } from './pages/product-click/ProductClick';
 
-function App() {
+export const App=()=>{
   return (
-    <>
-    Hello Mate
-    </>
+    <div className="default-layout">
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home/>} />
+      <Route path='/product-landing' element={<ProductClick/>} />
+    </Routes>
+    </BrowserRouter>
+    </div>
   );
 }
 

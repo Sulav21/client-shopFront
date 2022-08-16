@@ -1,0 +1,36 @@
+.header{
+    margin:2rem;
+}
+.nav-link{
+    color:black;
+}
+
+.search-all{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.orders{
+    display: flex;
+    justify-content: space-evenly;
+    gap:50px;
+}
+
+.search{
+    background-color: #f2f2f2;
+    color: #43454b;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 13%);
+ padding:6px;
+    
+}
+
+.dropdown-menu{
+    /* --bs-dropdown-bg:rgba(0,0,0,0) !important; */
+    --bs-border-color-translucent:rgba(0,0,0,0);
+}
+
+/* .navbar{
+    background-color: rgb(58, 182, 34);
+    border-radius: 6px;
+} */
+
