@@ -23,12 +23,14 @@ const products = [
 ];
 
 export const ProductClick = () => {
+  const cart = []
   const [imageIndex, setImageIndex] = useState(0);
   const dispatch= useDispatch()
   // const [cartNumber, setCartNumber] = useState(0);
-  const { cart } = useSelector((state) => state.cart);
+  // const { cart } = useSelector((state) => state.cart);
   const handleOnAddToCart = (product) => {
-    dispatch(cartAction(product))
+    cart.push(product)
+    dispatch(cartAction(cart))
     // console.log(product);
   };
 
@@ -69,6 +71,12 @@ export const ProductClick = () => {
                   />
                 ))}
               </div>
+              {/* <label for="cars">Quantity:</label>
+  <select id="" name="">
+    {}
+    <option value="volvo">Volvo XC90</option> */}
+    
+  {/* </select> */}
 
               <button className="cart" onClick={() => handleOnAddToCart(item)}>
                 Add to cart
