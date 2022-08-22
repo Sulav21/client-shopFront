@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 const glovesImages = [
     {
-       _id: 1,  
+       _id: 1,   
        src: kkr
     },
     {

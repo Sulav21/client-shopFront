@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/esm/Container";
+import { useDispatch, useSelector } from "react-redux";
+import { cartAction } from "../../components/cart/CartAction";
 import { DefaultLayout } from "../../components/layout/DefaultLayout";
 import "./productClick.css";
 const products = [
@@ -22,15 +24,21 @@ const products = [
 
 export const ProductClick = () => {
   const [imageIndex, setImageIndex] = useState(0);
-
+  const dispatch= useDispatch()
+  // const [cartNumber, setCartNumber] = useState(0);
+  const { cart } = useSelector((state) => state.cart);
+  const handleOnAddToCart = (product) => {
+    dispatch(cartAction(product))
+    // console.log(product);
+  };
 
   const handleTab = (index) => {
     // alert(index);
     setImageIndex(index);
   };
-  const handleOnClick=(index)=>{
-    handleTab(index)
-  }
+  const handleOnClick = (index) => {
+    handleTab(index);
+  };
 
   return (
     <DefaultLayout className="prodView">
@@ -54,15 +62,17 @@ export const ProductClick = () => {
                 {item.src.map((img, index) => (
                   <img
                     src={img}
-                    className={index=== imageIndex ? 'active' : ''}
+                    className={index === imageIndex ? "active" : ""}
                     alt=""
                     key={index}
-                    onClick={()=>handleOnClick(index)}
+                    onClick={() => handleOnClick(index)}
                   />
                 ))}
               </div>
 
-              <button className="cart">Add to cart</button>
+              <button className="cart" onClick={() => handleOnAddToCart(item)}>
+                Add to cart
+              </button>
             </div>
           </div>
         ))}

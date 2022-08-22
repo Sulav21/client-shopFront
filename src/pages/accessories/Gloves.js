@@ -1,12 +1,11 @@
-import React from 'react';
+import React from 'react'
 import Card from 'react-bootstrap/Card';
 import { Container } from 'react-bootstrap';
-import { DefaultLayout } from '../../components/layout/DefaultLayout'
 import mrf from "../../images/bats/mrf1.jpg";
 import kkr from "../../images/bats/kokaburra.jpg";
 import gm from "../../images/bats/gm.jpg";
-import { CardComp } from '../../components/card-comp/CardComp';
 import { Link } from 'react-router-dom';
+
 
 const batsImages = [
     {
@@ -58,14 +57,12 @@ const batsImages = [
         src: gm,
       },
   ];
-
-  
-export const Bat = () => {
+export const Gloves = () => {
   return (
-    <DefaultLayout>
+   
         
 <Container >
-      <h3 className="text-center mt-3 mb-4">Cricket Bats</h3>
+      <h3 className="text-center mt-3 mb-4">Cricket Gloves</h3>
       <div className="bat-home d-flex flex-wrap justify-content-around">
         {batsImages.map((item, i) => (
            <Card className='cardComp p-2 mb-3' style={{ width: '16rem'}}>
@@ -76,6 +73,5 @@ export const Bat = () => {
         ))}
       </div>
     </Container>
-    </DefaultLayout>
   )
 }

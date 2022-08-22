@@ -62,12 +62,14 @@ export const Header = () => {
               />
             </div>
             <div className="orders">
-              <div className="price">
+              {/* <div className="price">
                 <span>$0.00</span>
                 <span>0 items</span>
-              </div>
+              </div> */}
               <div className="cart">
-                <i class="fa-solid fa-basket-shopping"></i>
+              {/* <i class="fa-solid fa-cart-shopping-fast"></i> */}
+              <i class="fa-solid fa-cart-shopping"></i>
+              <div className="cart-icon">10</div>
               </div>
             </div>
           </div>

@@ -15,6 +15,31 @@
     justify-content: space-evenly;
     gap:50px;
 }
+/* .cart i{
+    width:500px;
+    height: 100px;
+} */
+.cart{
+    position: relative;
+}
+.cart-icon{
+    width: 20px;
+    height: 20px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #23bbcf;
+    position: absolute;
+    top:-15px;
+    right: -10px;
+    /* left:20px; */
+    /* left: 5px; */
+}
+
 
 .search{
     background-color: #f2f2f2;
@@ -33,4 +58,5 @@
     background-color: rgb(58, 182, 34);
     border-radius: 6px;
 } */
+
 
